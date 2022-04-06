@@ -1,0 +1,11 @@
+.header {
+  background-color: #fff4e6;
+}
+
+.heading {
+  color: #e8590c;
+  padding: 50px;
+  font-size: 48px;
+  /* box-shadow: 5px 10px #888888; */
+  /* border: 1px solid #212529; */
+}

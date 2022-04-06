@@ -1,0 +1,17 @@
+.taskContainer {
+  background-color: #fff4e6;
+  display: flex;
+}
+
+.task {
+  color: #212529;
+  font-size: 16px;
+  padding: 10px 25px;
+}
+
+input {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 10px 5px 10px 25px;
+}

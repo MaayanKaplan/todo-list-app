@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Components/Header";
+import TaskList from "./Components/TaskList";
+import AddTask from "./Components/AddTask";
+
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import { useState } from "react";
+
+const defaultTasks = [{ name: "Create a ToDo react app." }];
 
 function App() {
+  const [tasks, setTasks] = useState(defaultTasks);
+
+  const addNewTaskEvent = (name) => {
+    const newTasks = [...tasks];
+    newTasks.push({ name: name });
+    setTasks(newTasks);
+    console.log(tasks);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+        <Header />
+      </>
+
+      <>
+        <TaskList tasks={tasks}></TaskList>
+        <AddTask addNewTaskEvent={addNewTaskEvent} />
+      </>
     </div>
   );
 }

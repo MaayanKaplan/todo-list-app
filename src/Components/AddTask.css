@@ -1,0 +1,19 @@
+.AddTaskContainer {
+  background-color: #fff4e6;
+  color: #212529;
+}
+
+input {
+  width: 250px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+  background-color: #e8590c;
+  color: #fff4e6;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 8px;
+}
