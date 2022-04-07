@@ -1,4 +1,5 @@
 * {
   margin: 0;
-  background-color: #fff4e6;
+  background: linear-gradient(45deg, #fff4e6, #fff6eb);
+  font-family: "Poppins", sans-serif;
 }
