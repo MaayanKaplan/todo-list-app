@@ -3,20 +3,20 @@ import "./AddTask.css";
 
 const AddTask = (props) => {
   console.log("rendered !");
-  const [name, setName] = useState("");
+  const [input, setInput] = useState("");
 
   const CreateNewTaskHandler = (event) => {
     event.preventDefault();
-    props.addNewTaskEvent(name);
+    props.addNewTaskEvent(input);
   };
 
   return (
     <div className="AddTaskContainer">
-      <form>
+      <form addNewTaskEvent={CreateNewTaskHandler}>
         <input
           type="text"
           placeholder="What do you need to do?"
-          onChange={(event) => setName(event.target.value)}
+          onChange={(event) => setInput(event.target.value)}
         ></input>
         <button onClick={CreateNewTaskHandler}>Add Task</button>
       </form>

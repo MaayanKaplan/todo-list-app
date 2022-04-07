@@ -1,14 +1,29 @@
 import "./Task.css";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import { RiCloseCircleLine } from "react-icons/ri";
+// import { useState } from "react";
 
 const Task = (props) => {
+  const removeTask = (event) => {
+    event.preventDefault();
+    console.log("clicked!");
+  };
+
+  const doneTask = (event) => {
+    event.preventDefault();
+    console.log("DONE!");
+  };
+
   return (
-    <div className="taskContainer">
-      {/* <input type="checkbox"></input> */}
-      <IoIosCloseCircleOutline />
-      <p className="task">{props.name}</p>
-      <ion-icon name="close-outline"></ion-icon>
-    </div>
+    <>
+      <div className="taskContainer">
+        <div className="icons">
+          <RiCloseCircleLine onClick={removeTask} className="delete-icon" />
+        </div>
+        <a href="#" onClick={doneTask} className="task">
+          {props.name}
+        </a>
+      </div>
+    </>
   );
 };
 

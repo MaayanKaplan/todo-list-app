@@ -1,17 +1,18 @@
 .taskContainer {
   background-color: #fff4e6;
   display: flex;
+  /* margin: 10px 30px; */
 }
 
 .task {
+  text-decoration: none;
   color: #212529;
   font-size: 16px;
-  padding: 10px 25px;
+  padding: 10px 10px;
 }
 
-input {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin: 10px 5px 10px 25px;
+.delete-icon {
+  color: #e8590c;
+  margin: 12px 0 10px 30px;
+  cursor: pointer;
 }
