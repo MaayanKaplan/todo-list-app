@@ -1,10 +1,10 @@
-.taskContainer {
+.todoContainer {
   background-color: #fff4e6;
   display: flex;
   /* margin: 10px 30px; */
 }
 
-.task {
+.todo {
   text-decoration: none;
   color: #212529;
   font-size: 16px;
@@ -13,6 +13,8 @@
 
 .delete-icon {
   color: #e8590c;
+  width: 24px;
+  height: 24px;
   margin: 12px 0 10px 30px;
   cursor: pointer;
 }

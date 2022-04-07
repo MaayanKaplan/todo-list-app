@@ -1,8 +1,3 @@
-.AddTaskContainer {
-  background-color: #fff4e6;
-  color: #212529;
-}
-
 input {
   width: 250px;
   padding: 7px;
@@ -11,6 +6,12 @@ input {
   border: 5px solid #ff922b;
   border-radius: 10px 0 0 10px;
   /* top-left top-right bottom-right bottom-left */
+}
+
+input::placeholder {
+  color: #212529;
+  /* background-color: #fff; */
+  padding: 30px;
 }
 
 button {

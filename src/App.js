@@ -1,31 +1,57 @@
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
-import TaskList from "./Components/TaskList";
-import AddTask from "./Components/AddTask";
-
-import { useState } from "react";
-
-const defaultTasks = [{ name: "Create a ToDo react app." }];
+import AddTodo from "./Components/AddTodo";
+import TodoList from "./Components/TodoList";
+// import Todo from "./Components/Todo";
 
 function App() {
-  const [tasks, setTasks] = useState(defaultTasks);
+  // const [input, setInput] = useState("");
+  const [todos, setTodos] = useState([]);
 
-  const addNewTaskEvent = (input) => {
-    const newTasks = [...tasks];
-    newTasks.push({ name: input });
-    setTasks(newTasks);
-    console.log(tasks);
+  // Adding a task
+  const addTodo = (input) => {
+    setTodos([
+      ...todos,
+      { text: input, completed: false, id: Math.floor(Math.random() * 10000) },
+    ]);
+    console.log(todos);
   };
+
+  // Removing a task
+  const removeTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+  // const removeTodo = (id) => {
+  //   console.log("first");
+  //   const removedArr = [...todos].filter((todo) => todo.id !== id);
+
+  //   setTodos(removedArr);
+  // };
+
+  // // Complete task
+  // const doneTodo = (event) => {
+  //   event.preventDefault();
+  //   console.log("DONE!");
+  // };
 
   return (
     <div className="App">
       <>
         <Header />
       </>
-
       <>
-        <AddTask addNewTaskEvent={addNewTaskEvent} />
-        <TaskList tasks={tasks}></TaskList>
+        <AddTodo
+          // todos={todos}
+          // setTodos={setTodos}
+          // input={input}
+          // setInput={setInput}
+          addTodo={addTodo}
+        />
+        <TodoList todos={todos} removeTodo={removeTodo} />
+        {/* <Todo removeTodo={removeTodo} /> */}
       </>
     </div>
   );
