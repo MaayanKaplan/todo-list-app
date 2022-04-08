@@ -2,13 +2,18 @@ import React from "react";
 import "./Todo.css";
 import { RiCloseCircleLine } from "react-icons/ri";
 
-const Todo = ({ text, removeTodo, completeTodo }) => {
+const Todo = ({ text, id, removeTodo, todos }) => {
+  const removeItem = (event) => {
+    event.preventDefault();
+    removeTodo(id);
+  };
+
   return (
     <div className="todoContainer">
       <div className="icons">
-        <RiCloseCircleLine onClick={removeTodo} className="delete-icon" />
+        <RiCloseCircleLine onClick={removeItem} className="delete-icon" />
       </div>
-      <a onClick={completeTodo} href="#" className="todo">
+      <a href="#" className="todo">
         {text}
       </a>
     </div>

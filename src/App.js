@@ -17,22 +17,15 @@ function App() {
   };
 
   // Removing a task
-  // const removeTodo = (index) => {
-  //   const newTodos = [...todos];
-  //   newTodos.splice(index, 1);
-  //   setTodos(newTodos);
-  // };
-
   const removeTodo = (id) => {
-    console.log("clicked");
-    const removedArr = [...todos];
-    removedArr.filter((todo) => todo.id !== id);
+    const removedArr = [...todos].filter((todo) => todo.id !== id);
 
     setTodos(removedArr);
   };
 
   // Complete task
-  const completeTodo = () => {
+  const completeTodo = (event) => {
+    event.preventDefault();
     console.log("Done!");
   };
 
