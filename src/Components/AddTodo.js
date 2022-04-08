@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./AddTodo.css";
 
 const AddTodo = ({ addTodo }) => {
-  console.log("rendered !");
   const [input, setInput] = useState("");
 
   const addNewTodo = (event) => {

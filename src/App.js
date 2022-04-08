@@ -3,10 +3,8 @@ import "./App.css";
 import Header from "./Components/Header";
 import AddTodo from "./Components/AddTodo";
 import TodoList from "./Components/TodoList";
-// import Todo from "./Components/Todo";
 
 function App() {
-  // const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
 
   // Adding a task
@@ -19,41 +17,40 @@ function App() {
   };
 
   // Removing a task
-  const removeTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+  // const removeTodo = (index) => {
+  //   const newTodos = [...todos];
+  //   newTodos.splice(index, 1);
+  //   setTodos(newTodos);
+  // };
+
+  const removeTodo = (id) => {
+    console.log("clicked");
+    const removedArr = [...todos];
+    removedArr.filter((todo) => todo.id !== id);
+
+    setTodos(removedArr);
   };
-  // const removeTodo = (id) => {
-  //   console.log("first");
-  //   const removedArr = [...todos].filter((todo) => todo.id !== id);
 
-  //   setTodos(removedArr);
-  // };
-
-  // // Complete task
-  // const doneTodo = (event) => {
-  //   event.preventDefault();
-  //   console.log("DONE!");
-  // };
+  // Complete task
+  const completeTodo = () => {
+    console.log("Done!");
+  };
 
   return (
-    <div className="App">
-      <>
+    <>
+      <div className="App">
         <Header />
-      </>
-      <>
-        <AddTodo
-          // todos={todos}
-          // setTodos={setTodos}
-          // input={input}
-          // setInput={setInput}
-          addTodo={addTodo}
+
+        <AddTodo addTodo={addTodo} />
+
+        <TodoList
+          todos={todos}
+          setTodos={setTodos}
+          removeTodo={removeTodo}
+          completeTodo={completeTodo}
         />
-        <TodoList todos={todos} removeTodo={removeTodo} />
-        {/* <Todo removeTodo={removeTodo} /> */}
-      </>
-    </div>
+      </div>
+    </>
   );
 }
 
