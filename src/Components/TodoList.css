@@ -1,20 +1,25 @@
 .todoContainer {
   background-color: #fff4e6;
   display: flex;
-  /* margin: 10px 30px; */
+  margin-top: 10px;
 }
 
 .todo {
   text-decoration: none;
+  cursor: pointer;
   color: #212529;
   font-size: 16px;
-  padding: 13px 10px;
+  margin-left: 35px;
 }
 
 .delete-icon {
   color: #e8590c;
   width: 24px;
   height: 24px;
-  margin: 12px 0 10px 30px;
+  margin-left: 15px;
   cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
 }

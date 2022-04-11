@@ -12,7 +12,7 @@ const AddTodo = ({ addTodo }) => {
 
   return (
     <>
-      <form>
+      <form onSubmit={addNewTodo}>
         <input
           value={input}
           onChange={(event) => setInput(event.target.value)}
