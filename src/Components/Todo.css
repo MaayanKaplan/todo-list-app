@@ -1,0 +1,19 @@
+.todo {
+  text-decoration: none;
+  cursor: pointer;
+  color: #212529;
+  font-size: 16px;
+  margin-left: 35px;
+}
+
+.delete-icon {
+  color: #e8590c;
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}

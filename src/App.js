@@ -9,10 +9,7 @@ function App() {
 
   // Adding a task
   const addTodo = (input) => {
-    setTodos([
-      ...todos,
-      { text: input, isComplete: false, id: Math.floor(Math.random() * 10000) },
-    ]);
+    setTodos([...todos, { text: input, isCompleted: false }]);
     console.log(todos);
   };
 
