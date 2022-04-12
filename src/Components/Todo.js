@@ -1,7 +1,10 @@
 import "./Todo.css";
+import { useState } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 
 const Todo = ({ text, id, removeTodo, completeTodo, todos }) => {
+  const [style, setStyle] = useState({ display: "none" });
+
   const removeItem = (event) => {
     event.preventDefault();
     removeTodo(id);
@@ -14,13 +17,22 @@ const Todo = ({ text, id, removeTodo, completeTodo, todos }) => {
 
   return (
     <div className="todoContainer">
-      <p
-        onClick={checkItem}
+      <div
         className={`todo ${todos[id].isCompleted ? "completed" : ""}`}
+        onMouseEnter={(event) => {
+          setStyle({ display: "block" });
+        }}
+        onMouseLeave={(event) => {
+          setStyle({ display: "none" });
+        }}
       >
-        {text}
-      </p>
-      <RiCloseCircleLine onClick={removeItem} className="delete-icon" />
+        <p onClick={checkItem}>{text}</p>
+        <RiCloseCircleLine
+          style={style}
+          onClick={removeItem}
+          className="delete-icon"
+        />
+      </div>
     </div>
   );
 };

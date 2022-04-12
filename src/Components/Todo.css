@@ -2,8 +2,7 @@
   text-decoration: none;
   cursor: pointer;
   color: #212529;
-  font-size: 16px;
-  margin-left: 35px;
+  font-size: 18px;
 }
 
 .delete-icon {
@@ -11,6 +10,7 @@
   width: 24px;
   height: 24px;
   margin-left: 15px;
+  margin-top: 3px;
   cursor: pointer;
 }
 

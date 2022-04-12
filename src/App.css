@@ -3,3 +3,8 @@
   background: linear-gradient(45deg, #fff4e6, #fff6eb);
   font-family: "Poppins", sans-serif;
 }
+
+.App {
+  text-align: center;
+  justify-content: center;
+}

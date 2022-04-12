@@ -1,5 +1,10 @@
 .todoContainer {
   background-color: #fff4e6;
-  display: flex;
   margin-top: 10px;
+}
+
+.todo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
